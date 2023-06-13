@@ -9,7 +9,7 @@ public class MemberServiceTest {
 
     MemberService memberService;
 
-    @BeforeEach
+    @BeforeEach     // 테스트 실행 전에 무조건 실행
     public void beforeEach(){
         AppConfig appConfig = new AppConfig();
         memberService = appConfig.memberService();
