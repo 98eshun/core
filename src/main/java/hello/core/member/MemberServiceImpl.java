@@ -1,10 +1,14 @@
 package hello.core.member;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component //("여기에 이름을 넣어줄 수 있음")
 public class MemberServiceImpl implements MemberService {
 
     private MemberRepository memberRepository;
 
-
+    @Autowired  // ac.getBean(MemberRepository.class)의 느낌
     public MemberServiceImpl(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }
